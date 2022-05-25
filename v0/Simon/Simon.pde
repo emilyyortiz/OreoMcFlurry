@@ -1,3 +1,5 @@
+//TMPG: Oreo McFlurry (Emily Ortiz, Jing Yi Feng)
+
 PShape s, sq0;
 
 void setup() {
