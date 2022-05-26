@@ -1,23 +1,25 @@
+//TNPG: Oreo McFlurry (Emily Ortiz, Jing Yi Feng)
+
 PShape s, sq0, sq1, sq2, sq3;
 color color0;
 
 void setup() {
   size(430, 430);
   s = createShape(GROUP);
-  
+
   sq0 = createShape(RECT, 10, 10, 200, 200);
   color0 = color(36, 112, 42);
   sq0.setFill(color(36, 112, 42));
   s.addChild(sq0);
-  
+
   sq1 = createShape(RECT, 220, 10, 200, 200);
   sq1.setFill(color(112, 42, 36));
   s.addChild(sq1);
-  
+
   sq2 = createShape(RECT, 10, 220, 200, 200);
   sq2.setFill(color(161, 148, 37));
   s.addChild(sq2);
-  
+
   sq3 = createShape(RECT, 220, 220, 200, 200);
   sq3.setFill(color(41, 34, 120));
   s.addChild(sq3);
@@ -45,7 +47,7 @@ void mouseClicked(){
       //lightUp(1);
     }
   }
-   
+
   //sq 2 or 3
   if (mouseY > 220 && mouseY < 420){
     //sq2

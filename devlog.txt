@@ -42,10 +42,10 @@ tales of wisdom gained...
 ==============================================================
 
 
-yyyy-mm-dd
+2022-05-26
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Jing & Emily :: Worked on proposal
+Emily :: Pushed old code, made flag
 ==============================================================
 
 2022-05-25 in class
