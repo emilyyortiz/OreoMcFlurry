@@ -59,3 +59,8 @@ Emily :: Pushed old code, made flag
 --------------------------------------------------------------
 Emily :: wrote implementation section of proposal, uploaded propro.pdf, updated latest working version at root
 ==============================================================
+
+2022-05-27 in class
+--------------------------------------------------------------
+Jing & Emily :: wrote UML diagram, worked on code for sq's lighting up, and delays
+==============================================================
