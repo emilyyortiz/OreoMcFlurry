@@ -42,13 +42,20 @@ tales of wisdom gained...
 ==============================================================
 
 
-2022-05-26
+2022-05-25 in class
+--------------------------------------------------------------
+Jing & Emily :: wrote readme, renamed files properly, started devlog
+==============================================================
+
+
+2022-05-26 in class
 --------------------------------------------------------------
 Jing & Emily :: Worked on proposal
 Emily :: Pushed old code, made flag
 ==============================================================
 
-2022-05-25 in class
+
+2022-05-27 before class
 --------------------------------------------------------------
-Jing & Emily :: wrote readme, renamed files properly, started devlog
+Emily :: wrote implementation section of proposal, uploaded propro.pdf
 ==============================================================
