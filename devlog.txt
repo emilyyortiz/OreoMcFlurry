@@ -67,3 +67,8 @@ Jing & Emily :: started UML diagram, worked on code for sq's lighting up, and de
 --------------------------------------------------------------
 Emily :: wrote UML diagrams, uploaded uml.pdf
 ==============================================================
+
+2022-05-31 in class
+--------------------------------------------------------------
+Jing & Emily :: began implementing Button class in Simon.pde (v2)
+==============================================================
