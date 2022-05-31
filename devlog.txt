@@ -47,13 +47,11 @@ tales of wisdom gained...
 Jing & Emily :: wrote readme, renamed files properly, started devlog
 ==============================================================
 
-
 2022-05-26 in class
 --------------------------------------------------------------
 Jing & Emily :: Worked on proposal
 Emily :: Pushed old code, made flag
 ==============================================================
-
 
 2022-05-27 before class
 --------------------------------------------------------------
@@ -62,5 +60,10 @@ Emily :: wrote implementation section of proposal, uploaded propro.pdf, updated 
 
 2022-05-27 in class
 --------------------------------------------------------------
-Jing & Emily :: wrote UML diagram, worked on code for sq's lighting up, and delays
+Jing & Emily :: started UML diagram, worked on code for sq's lighting up, and delays
+==============================================================
+
+2022-05-31 before class
+--------------------------------------------------------------
+Emily :: wrote UML diagrams, uploaded uml.pdf
 ==============================================================
