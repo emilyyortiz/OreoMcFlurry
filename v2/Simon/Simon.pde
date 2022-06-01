@@ -41,13 +41,16 @@ class Button {
    c = color(random(255),random(255),random(255));
  } // end execute
  
+ boolean mouseClicked(){
+   return true;
+ }
  
  // displays the button
  void display() {
    fill(c);
    rect(_cornerX,_cornerY,_width,_height);
    
-   if (mousePressed && isInButton()) {
+   if (mouseClicked() && isInButton()) {
      execute();
    }
  }// end draw
