@@ -11,6 +11,7 @@ Simon
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
+*** EDIT MORE: 6/3 figuring out the flashing button
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,4 +87,9 @@ Emily :: uploaded flowchart.pdf, updated devlog
 2022-06-02 in class
 --------------------------------------------------------------
 Emily & Jing :: worked on v2, getting mouse clicking to work
+==============================================================
+
+2022-06-03 at like 12am lol
+--------------------------------------------------------------
+Emily :: made v3 and put that into a bonfire, made v4 with A WORKING FLASH WHEN CLICKED, took a celebratory music break, enjoyed the dopamine rush
 ==============================================================
