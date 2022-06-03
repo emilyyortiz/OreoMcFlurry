@@ -1,7 +1,6 @@
 //TNPG: Oreo McFlurry (Emily Ortiz, Jing Yi Feng)
 
-// Credit to Ruff Comandos
-
+// Modified Button Class from Ruff Comandos
 class Button {
   
  // these coordinates define the top left corner of the button
@@ -11,14 +10,7 @@ class Button {
  float _width, _height;
  
  // defines the color of the button
- color cDarker;
- 
- color cLighter;
- 
- //c is color currently displayed
- color c;
- 
- // defines whats inside the button
+ color cDarker, cLighter;
  
  
  // overloaded constructor
@@ -36,24 +28,21 @@ class Button {
   this(x,y,wid,high);
   cDarker = colD;
   cLighter = colL;
-  c = cDarker;
  } // end constructor
  
  
  // function does what the buttons function is
  void execute() {
-   // in this case the function is to randomly change the buttons color
-   //c = cLighter;
+   // in this case the function is to make the button a lighter color ("flash")
    display(cLighter);
-   frameRate(1);
+   frameRate(2);
  } // end execute
  
  
  // displays the button
- void display(color cc) {
-   fill(cc);
+ void display(color c) {
+   fill(c);
    rect(_cornerX,_cornerY,_width,_height);
-   
  }// end draw
  
  
@@ -66,11 +55,11 @@ class Button {
   return false; 
  } // end isInButton
  
-}// end class
+}// end Button class
 
-
-color D0 = color(36, 112, 42); //dark green (top left)
-color L0 = color(62, 221, 75); //lighter green
+// colors
+color D0 = color(36, 112, 42); // dark green (top left)
+color L0 = color(62, 221, 75); // lighter green
 color D1 = color(112, 42, 36);
 color L1 = color(221, 75, 62);
 color D2 = color(161, 148, 37);
@@ -78,16 +67,17 @@ color L2 = color(255, 234, 55);
 color D3 = color(41, 34, 120);
 color L3 = color(75, 62, 221);
 
-boolean playingState = true;
-//true is playing, false is displaying 
+// IMPLEMENT LATER
+boolean playingState = true; //true is playing, false is displaying 
 
+// buttons
 Button sq0 = new Button(10, 10, 200, 200, D0, L0);
 Button sq1 = new Button(220, 10, 200, 200, D1, L1);
 Button sq2 = new Button(10, 220, 200, 200, D2, L2);
 Button sq3 = new Button(220, 220, 200, 200, D3, L3);
+
 void setup(){
   size(430, 430);
-  sq0.display(D0); 
   background(0);
 }
 
@@ -103,14 +93,13 @@ void mouseClicked(){
   if (sq0.isInButton() ){
     sq0.execute();
   }
-  if (sq1.isInButton()) {
+  else if (sq1.isInButton()) {
     sq1.execute();
   }
-  if (sq2.isInButton()) {
+  else if (sq2.isInButton()) {
     sq2.execute();
   }
-  if (sq3.isInButton()) {
+  else if (sq3.isInButton()) {
     sq3.execute();
   }
-  //sq0.c = sq0.cDarker;
 }
