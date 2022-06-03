@@ -11,6 +11,7 @@ Simon
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
+*** EDIT MORE: 6/3 figuring out the flashing button
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,4 +72,29 @@ Emily :: wrote UML diagrams, uploaded uml.pdf
 2022-05-31 in class
 --------------------------------------------------------------
 Jing & Emily :: began implementing Button class in Simon.pde (v2)
+==============================================================
+
+2022-06-01 in class
+--------------------------------------------------------------
+Jing & Emily :: made flowchart, worked on v2
+==============================================================
+
+2022-06-02 before class
+--------------------------------------------------------------
+Emily :: uploaded flowchart.pdf, updated devlog
+==============================================================
+
+2022-06-02 in class
+--------------------------------------------------------------
+Emily & Jing :: worked on v2, getting mouse clicking to work
+==============================================================
+
+2022-06-03 at like 12am lol
+--------------------------------------------------------------
+Emily :: made v3 and put that into a bonfire, made v4 with A WORKING FLASH WHEN CLICKED, took a celebratory music break, enjoyed the dopamine rush
+==============================================================
+
+2022-06-03 before class
+--------------------------------------------------------------
+Jing :: made the other 3 buttons and flash work. v5 :)
 ==============================================================

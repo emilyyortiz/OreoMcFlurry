@@ -1,9 +1,6 @@
 //TNPG: Oreo McFlurry (Emily Ortiz, Jing Yi Feng)
 
-
-
-// Credit to Ruff Comandos
-
+// Button class modified from Ruff Comandos
 class Button {
   
  // these coordinates define the top left corner of the button
@@ -13,15 +10,11 @@ class Button {
  float _width, _height;
  
  // defines the color of the button
- color cDarker;
- 
- color cLighter;
+ color cDarker, cLighter;
  
  //c is color currently displayed
  color c;
- 
- // defines whats inside the button
- 
+
  
  // overloaded constructor
  Button(float x, float y, float len, float high) {
@@ -44,17 +37,20 @@ class Button {
  
  // function does what the buttons function is
  void execute() {
-   // in this case the function is to randomly change the buttons color
-   c = cLighter;
-   //cDarker = color(random(255),random(255),random(255));
+   //
+   //c = cLighter;
+   display(cLighter);
+   //delay(1000);
+   //display(cDarker);
+   println("hi");
+   //delay(1000);
  } // end execute
  
  
  // displays the button
- void display() {
-   fill(c);
+ void display(color cc) {
+   fill(cc);
    rect(_cornerX,_cornerY,_width,_height);
-   
  }// end draw
  
  
@@ -69,25 +65,48 @@ class Button {
  
 }// end class
 
-
+// Simon code
 color D0 = color(36, 112, 42);
 color L0 = color(62, 221, 75);
-boolean playingState = true;
-//true is playing, false is displaying 
 
-Button sq0 = new Button(10, 10, 200, 200, D0, L0);
+boolean playingState = true; //true is playing, false is displaying 
+
+Button sq00 = new Button(10, 10, 200, 200, D0, L0);
+
+PShape s, sq0;
+
 void setup(){
   size(430, 430);
-  sq0.display(); 
   background(0);
+  //s = createShape(GROUP);
+  //sq0 = createShape(RECT, 10, 10, 200, 200);
+  //sq0.setFill(color(36, 112, 42));
+  //s.addChild(sq0);
+ // sq00.display(D0);
 }
 
 void draw(){
-  sq0.display();
+  //shape(s);
+  sq00.display(D0);
 }
 
 void mouseClicked(){
-  if (sq0.isInButton()){
-    sq0.execute();
+  //if (sq00.isInButton()){
+  //  sq00.display(L0);
+  //  boolean lala = true;
+  //  int m = millis();
+  //  while (lala){
+  //    if (m >= 1000){
+  //    sq00.display(D0);
+  //      lala = false;  
+  //  }
+  //  }
+  }
+  
+//boolean timer(int milisecs){
+//  case
+    
+    //frameRate(1);
+    //sq00.display(D0);
   }
 }
