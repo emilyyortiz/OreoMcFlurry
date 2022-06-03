@@ -39,16 +39,17 @@ class Button {
  void execute() {
    //
    //c = cLighter;
-   fill(cLighter);
+   display(cLighter);
    //delay(1000);
+   //display(cDarker);
    println("hi");
    //delay(1000);
  } // end execute
  
  
  // displays the button
- void display() {
-   fill(cDarker);
+ void display(color cc) {
+   fill(cc);
    rect(_cornerX,_cornerY,_width,_height);
  }// end draw
  
@@ -77,20 +78,35 @@ PShape s, sq0;
 void setup(){
   size(430, 430);
   background(0);
-  s = createShape(GROUP);
-  sq0 = createShape(RECT, 10, 170, 200, 200);
-  sq0.setFill(color(36, 112, 42));
-  s.addChild(sq0);
+  //s = createShape(GROUP);
+  //sq0 = createShape(RECT, 10, 10, 200, 200);
+  //sq0.setFill(color(36, 112, 42));
+  //s.addChild(sq0);
+ // sq00.display(D0);
 }
 
 void draw(){
-shape(s);
-  sq00.display();
+  //shape(s);
+  sq00.display(D0);
 }
 
 void mouseClicked(){
-  if (sq00.isInButton()){
-    sq00.display();
-    sq00.execute();
+  //if (sq00.isInButton()){
+  //  sq00.display(L0);
+  //  boolean lala = true;
+  //  int m = millis();
+  //  while (lala){
+  //    if (m >= 1000){
+  //    sq00.display(D0);
+  //      lala = false;  
+  //  }
+  //  }
+  }
+  
+//boolean timer(int milisecs){
+//  case
+    
+    //frameRate(1);
+    //sq00.display(D0);
   }
 }
