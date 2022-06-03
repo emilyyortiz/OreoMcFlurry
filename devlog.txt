@@ -98,3 +98,8 @@ Emily :: made v3 and put that into a bonfire, made v4 with A WORKING FLASH WHEN 
 --------------------------------------------------------------
 Jing :: made the other 3 buttons and flash work. v5 :)
 ==============================================================
+
+2022-06-03 before class
+--------------------------------------------------------------
+Jing & Emily :: made v6, started on arraylist and iterator
+==============================================================
