@@ -101,27 +101,27 @@ void draw(){
   frameRate(60);
 }
 
-void mouseClicked(){
-  if(!displaying){
-    if (sq0.isInButton() ){
-      sq0.execute();
-    }
-    else if (sq1.isInButton()) {
-      sq1.execute();
-    }
-    else if (sq2.isInButton()) {
-      sq2.execute();
-    }
-    else if (sq3.isInButton()) {
-      sq3.execute();
-    }
-  }
-}
+//void mouseClicked(){
+  //if(!displaying){
+  //  if (sq0.isInButton() ){
+  //    sq0.execute();
+  //  }
+  //  else if (sq1.isInButton()) {
+  //    sq1.execute();
+  //  }
+  //  else if (sq2.isInButton()) {
+  //    sq2.execute();
+  //  }
+  //  else if (sq3.isInButton()) {
+  //    sq3.execute();
+  //  }
+  //}
+//}
 
 void play(){
   //while(playingState == true){
   // for testing
-  for (int i = 0; i < 4; i++){
+  while (playingState){
     newRound();
     repeatPattern();
   }
@@ -162,5 +162,25 @@ void lightUp(int sqr){
 }
 
 void repeatPattern(){
-  
+  Iterator<Integer> itr1 = pattern.iterator();
+  while(itr1.hasNext()){
+    int clickMe = itr1.next();
+    int m = millis();
+    while (m <= 1000){
+      if(mousePressed){
+        if (clickMe == 0 && sq0.isInButton() ){
+          sq0.execute();
+        }
+        else if (clickMe == 1 && sq1.isInButton()) {
+          sq1.execute();
+        }
+        else if (clickMe == 2 && sq2.isInButton()) {
+          sq2.execute();
+        }
+        else if (clickMe == 3 && sq3.isInButton()) {
+          sq3.execute();
+        }
+      }// end if(mousePressed)
+    }//end while(m<=1000)
+  }
 }
