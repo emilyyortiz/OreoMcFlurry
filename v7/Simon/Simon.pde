@@ -95,27 +95,27 @@ void setup(){
 }
 
 void draw(){
-  //sq0.display(D0);
-  //sq1.display(D1);
-  //sq2.display(D2);
-  //sq3.display(D3);
-  //frameRate(60);
+  sq0.display(D0);
+  sq1.display(D1);
+  sq2.display(D2);
+  sq3.display(D3);
+  frameRate(60);
 }
 
 void mouseClicked(){
-  if(!displaying){
-    if (clickMe == 0 && sq0.isInButton() ){
-      sq0.execute();
-    }
-    else if (clickMe == 1 && sq1.isInButton()) {
-      sq1.execute();
-    }
-    else if (clickMe == 2 && sq2.isInButton()) {
-      sq2.execute();
-    }
-    else if (clickMe == 3 && sq3.isInButton()) {
-      sq3.execute();
-    }
+  //if(!displaying){
+  //  if (clickMe == 0 && sq0.isInButton() ){
+  //    sq0.execute();
+  //  }
+  //  else if (clickMe == 1 && sq1.isInButton()) {
+  //    sq1.execute();
+  //  }
+  //  else if (clickMe == 2 && sq2.isInButton()) {
+  //    sq2.execute();
+  //  }
+  //  else if (clickMe == 3 && sq3.isInButton()) {
+  //    sq3.execute();
+  //  }
     //if (sq0.isInButton() ){
     //  sq0.execute();
     //}
@@ -129,7 +129,6 @@ void mouseClicked(){
     //  sq3.execute();
     //}
   }
-}
 
 void play(){
   //while(playingState == true){
@@ -173,35 +172,47 @@ void lightUp(int sqr){
   else if (sqr == 3) {
     sq3.execute();
   }
-    frameRate(60);
-  sq0.display(D0);
-  sq1.display(D1);
-  sq2.display(D2);
-  sq3.display(D3);
-
 }
 
 void repeatPattern(){
-  println("repeat pattern");
+  println("start of user repeating pattern");
   Iterator<Integer> itr1 = pattern.iterator();
   while(itr1.hasNext()){
     clickMe = itr1.next();
-    int m = millis();
-    while (m <= 1000){
+    int s = second(); // create timer
+    while (second() < s + 6){ //while still have time
+    
       if(mousePressed){
-        //if (clickMe == 0 && sq0.isInButton() ){
-        //  sq0.execute();
-        //}
-        //else if (clickMe == 1 && sq1.isInButton()) {
-        //  sq1.execute();
-        //}
-        //else if (clickMe == 2 && sq2.isInButton()) {
-        //  sq2.execute();
-        //}
-        //else if (clickMe == 3 && sq3.isInButton()) {
-        //  sq3.execute();
-        //}
+        if (clickMe == 0 && sq0.isInButton() ){
+          sq0.execute();
+          println("0 clicked");
+        }
+        else if (clickMe == 1 && sq1.isInButton()) {
+          sq1.execute();
+          println("1 clicked");
+        }
+        else if (clickMe == 2 && sq2.isInButton()) {
+          sq2.execute();
+          println("2 clicked");
+        }
+        else if (clickMe == 3 && sq3.isInButton()) {
+          sq3.execute();
+          println("3 clicked");
+        } else { //clicked wrong button
+          println("game over because clicked wrong button");
+          playingState = false;
+        }   
+        break;
       }// end if(mousePressed)
-    }//end while(m<=1000)
+      
+      if(second() > s + 4){
+        println("game over because no time");
+        playingState = false;
+        break;
+      }
+    
+  }
+   
+
   }
 }
