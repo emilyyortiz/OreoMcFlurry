@@ -119,3 +119,8 @@ Emily :: made v7, messing around with code but no real progress
 --------------------------------------------------------------
 Jing & Emily :: working on v7
 ==============================================================
+
+2022-06-07 in class
+--------------------------------------------------------------
+Jing & Emily :: working on v8, kinda displaying pattern, print diagnostics are helpful
+==============================================================
