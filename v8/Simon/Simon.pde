@@ -131,6 +131,7 @@ void newRound(){
     int currentSqr = itr0.next();
     println("current square: " + currentSqr);
     lightUp(currentSqr);
+    delay(4000);
     println("square " + currentSqr + " has lit up");
   }
   
