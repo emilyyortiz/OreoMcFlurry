@@ -17,10 +17,13 @@ wow we so BOSS bc...
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - we didn't implement a timer method to end the game when the player spends too long in the game.
+- we did not get to add music 
+- we have a glitch where the game ends and we could not debug it after 3 hrs of debugging.
+- we have a glitch where the colors of the player and the seqeunce overlaps sometimes.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--
+- 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,7 +32,7 @@ MID-DEVELOPMENT DESIGN CHANGES
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Flowchart is very useful when stuck on what the next steps are.
-
+- print statements are useful to see what is going on when graphics are not showing.
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -124,4 +127,9 @@ Jing & Emily :: working on v7
 2022-06-07 in class
 --------------------------------------------------------------
 Jing & Emily :: working on v8, kinda displaying pattern, print diagnostics are helpful
+==============================================================
+
+2022-06-09 at home
+--------------------------------------------------------------
+Jing & Emily :: worked on v9 + v10 + v11. Very stressful very frustrated, very tired. Got working output but not too proud of it. 
 ==============================================================
