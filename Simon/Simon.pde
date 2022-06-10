@@ -75,7 +75,6 @@ color L2 = color(255, 234, 55);
 color D3 = color(41, 34, 120);
 color L3 = color(75, 62, 221);
 
-// IMPLEMENT LATER
 boolean playingState = false; //true is playing, false is displaying 
 
 // buttons
@@ -84,14 +83,12 @@ Button sq1 = new Button(220, 10, 200, 200, D1, L1);
 Button sq2 = new Button(10, 220, 200, 200, D2, L2);
 Button sq3 = new Button(220, 220, 200, 200, D3, L3);
 
-// pattern
+// other
 ArrayList<Integer> pattern = new ArrayList<Integer>();
+Iterator<Integer> userItr;
 Iterator<Integer> sqrIterator;
 int timer = millis();
-int highScore = 0;
-Iterator<Integer> userItr;
 int currentUserSqr;
-boolean playGame = true;
 
 void setup(){
   size(430, 430);
@@ -141,10 +138,8 @@ void renderRound() {
 void mouseClicked(){
   
   // will only do things if in playing state
-  println("mouse clicked");
   if (playingState){
     if (userItr == null){
-      println("user pattern started");
       userItr = pattern.iterator();
       currentUserSqr = userItr.next();
       println("current square: " + currentUserSqr);
@@ -155,27 +150,15 @@ void mouseClicked(){
  
     if (currentUserSqr == 0 && sq0.isInButton()){
       sq0.turnOn();
-      //wait(500);
-      //sq0.shutOff();
-      println("sq0 lit up");
     }
     else if (currentUserSqr == 1 && sq1.isInButton()) {
       sq1.turnOn();
-      //wait(500);
-      //sq1.shutOff();
-      println("sq1 lit up");
     }
     else if (currentUserSqr == 2 && sq2.isInButton()) {
       sq2.turnOn();
-      //wait(500);
-      //sq2.shutOff();
-      println("sq2 lit up");
     }
     else if (currentUserSqr == 3 && sq3.isInButton()) {
       sq3.turnOn();
-      //wait(500);
-      //sq3.shutOff();
-      println("sq3 lit up");
     } else {
       gameOver();
    } 
@@ -231,9 +214,4 @@ void resetSqrs() {
 void gameOver(){
   println("game over");
   exit();
-}
-
-void wait(int t){// time in miliseconds
-  int currentTime = millis();
-  while(millis() - currentTime <= t){}
 }
