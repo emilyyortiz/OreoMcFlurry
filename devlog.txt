@@ -23,19 +23,23 @@ UNRESOLVED ISSUES
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 
+- familiarized ourselves with processing.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - we changed the original rectangle shapes to buttons bc it would be easier to work with and implement buttons.
+- we decided against adding a "high score" and "play again"
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Flowchart is very useful when stuck on what the next steps are.
 - print statements are useful to see what is going on when graphics are not showing.
+- processing doesn't handle time and pausing/waiting very well.
+- Familiarize the software/langauge in the planning phase because it might not work well with the project. 
 ||||||||||||||||||||||||||||||||||||||||||
 
-
+QCC:
+We struggled an enormous amount working on this project because a big amount of our project dealt with time and timers and flashes and pausing but processing was really, really hard to work with. Processing didn't really have a method to delay or pause the graphics without delaying the everything so we spent a lot of time sorting that out. 
 
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
@@ -129,7 +133,7 @@ Jing & Emily :: working on v7
 Jing & Emily :: working on v8, kinda displaying pattern, print diagnostics are helpful
 ==============================================================
 
-2022-06-09 at home
+2022-06-09 to 2022-06-10 at home
 --------------------------------------------------------------
-Jing & Emily :: worked on v9 + v10 + v11. Very stressful very frustrated, very tired. Got working output but not too proud of it. 
+Jing & Emily :: worked on v9 + v10 + v11. Worked from 6:30 pm to 3 am. Very stressful very frustrated, very tired. Got working output but not too proud of it. 
 ==============================================================
