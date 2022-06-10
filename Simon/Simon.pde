@@ -1,5 +1,8 @@
 //TNPG: Oreo McFlurry (Emily Ortiz, Jing Yi Feng)
 
+import java.util.Iterator;
+import java.util.ArrayList;
+
 // Modified Button Class from Ruff Comandos
 class Button {
   
@@ -11,6 +14,8 @@ class Button {
  
  // defines the color of the button
  color cDarker, cLighter;
+ 
+ color currentColor;
  
  
  // overloaded constructor
@@ -30,14 +35,17 @@ class Button {
   cLighter = colL;
  } // end constructor
  
+ // makes button lighter color
+ void turnOn() {
+   currentColor = cLighter;
+   display(currentColor);
+ } // end turnOn
  
- // function does what the buttons function is
- void execute() {
-   // in this case the function is to make the button a lighter color ("flash")
-   display(cLighter);
-   frameRate(2);
- } // end execute
- 
+ // makes button darker color
+ void shutOff() {
+   currentColor = cDarker;
+   display(currentColor);
+ } // end shutOff
  
  // displays the button
  void display(color c) {
@@ -68,7 +76,7 @@ color D3 = color(41, 34, 120);
 color L3 = color(75, 62, 221);
 
 // IMPLEMENT LATER
-boolean playingState = true; //true is playing, false is displaying 
+boolean playingState = false; //true is playing, false is displaying 
 
 // buttons
 Button sq0 = new Button(10, 10, 200, 200, D0, L0);
@@ -76,30 +84,156 @@ Button sq1 = new Button(220, 10, 200, 200, D1, L1);
 Button sq2 = new Button(10, 220, 200, 200, D2, L2);
 Button sq3 = new Button(220, 220, 200, 200, D3, L3);
 
+// pattern
+ArrayList<Integer> pattern = new ArrayList<Integer>();
+Iterator<Integer> sqrIterator;
+int timer = millis();
+int highScore = 0;
+Iterator<Integer> userItr;
+int currentUserSqr;
+boolean playGame = true;
+
 void setup(){
   size(430, 430);
   background(0);
-}
-
-void draw(){
+  frameRate(60);
   sq0.display(D0);
   sq1.display(D1);
   sq2.display(D2);
   sq3.display(D3);
-  frameRate(60);
+}
+
+  
+void draw(){
+  if(!playingState){
+    frameRate(60);
+    int currentTime = millis();
+    if (currentTime - timer >= 1000) {
+      timer = currentTime;
+      renderRound();
+    }
+    if (currentTime - timer >= 500) { // shuts off squares after 0.5 seconds
+      resetSqrs();
+    }
+  } else{
+    resetSqrs();
+  }
+}
+
+void renderRound() {  
+  int currentSqr;
+  if (sqrIterator == null) {
+    int newVal = (int) (Math.random() * 4);
+    pattern.add(newVal);
+    println("pattern:" + pattern.toString());
+    sqrIterator = pattern.iterator();
+    currentSqr = sqrIterator.next();
+  } else if (sqrIterator.hasNext()) {
+    currentSqr = sqrIterator.next();
+  } else {
+    sqrIterator = null;
+    playingState = true;
+    return;
+  }
+  lightUp(currentSqr);
 }
 
 void mouseClicked(){
-  if (sq0.isInButton() ){
-    sq0.execute();
+  
+  // will only do things if in playing state
+  println("mouse clicked");
+  if (playingState){
+    if (userItr == null){
+      println("user pattern started");
+      userItr = pattern.iterator();
+      currentUserSqr = userItr.next();
+      println("current square: " + currentUserSqr);
+    } else {
+      currentUserSqr = userItr.next();
+      println("current square: " + currentUserSqr);
+    }
+ 
+    if (currentUserSqr == 0 && sq0.isInButton()){
+      sq0.turnOn();
+      //wait(500);
+      //sq0.shutOff();
+      println("sq0 lit up");
+    }
+    else if (currentUserSqr == 1 && sq1.isInButton()) {
+      sq1.turnOn();
+      //wait(500);
+      //sq1.shutOff();
+      println("sq1 lit up");
+    }
+    else if (currentUserSqr == 2 && sq2.isInButton()) {
+      sq2.turnOn();
+      //wait(500);
+      //sq2.shutOff();
+      println("sq2 lit up");
+    }
+    else if (currentUserSqr == 3 && sq3.isInButton()) {
+      sq3.turnOn();
+      //wait(500);
+      //sq3.shutOff();
+      println("sq3 lit up");
+    } else {
+      gameOver();
+   } 
+
+   frameRate(3);
+   
+   if(!userItr.hasNext()){
+      userItr = null;
+      playingState = false;
+   }
+    
+  } // end if(playingState)
+  
+}//end mouseClicked
+
+void lightUp(int sqr){
+  if (sqr == 0){
+    sq0.turnOn();
   }
-  else if (sq1.isInButton()) {
-    sq1.execute();
+  else if (sqr == 1) {
+    sq1.turnOn();
   }
-  else if (sq2.isInButton()) {
-    sq2.execute();
+  else if (sqr == 2) {
+    sq2.turnOn();
   }
-  else if (sq3.isInButton()) {
-    sq3.execute();
+  else if (sqr == 3) {
+    sq3.turnOn();
   }
+}
+
+void shutOff(int sqr) {
+  if (sqr == 0){
+    sq0.shutOff();
+  }
+  else if (sqr == 1) {
+    sq1.shutOff();
+  }
+  else if (sqr == 2) {
+    sq2.shutOff();
+  }
+  else if (sqr == 3) {
+    sq3.shutOff();
+  }
+}
+
+void resetSqrs() {
+  shutOff(0);
+  shutOff(1);
+  shutOff(2);
+  shutOff(3);
+}
+
+void gameOver(){
+  println("game over");
+  exit();
+}
+
+void wait(int t){// time in miliseconds
+  int currentTime = millis();
+  while(millis() - currentTime <= t){}
 }
