@@ -11,7 +11,8 @@ Simon
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
-*** EDIT MORE: 6/3 figuring out the flashing button
+- 6/3 figuring out the flashing button
+- We got the sequence to show correctly after struggling for a LONG time!
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,11 +25,12 @@ wow! oo!...
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+- we changed the original rectangle shapes to buttons bc it would be easier to work with and implement buttons.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
+- Flowchart is very useful when stuck on what the next steps are.
+
 ||||||||||||||||||||||||||||||||||||||||||
 
 
